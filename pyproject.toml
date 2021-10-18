@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "proc-compose"
+version = "0.1.0"
+description = "Run several processes in tandem with synchronizes output"
+authors = ["Nick Beeuwsaert"]
+license = "MIT"
+packages = [
+  { include = "proc_compose", from = "src" },
+]
+
+[tool.poetry.scripts]
+proc-compose = "proc_compose:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+toml = "^0.10.2"
+colorama = "^0.4.4"
+colander = "^1.8.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
